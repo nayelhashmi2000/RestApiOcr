@@ -43,10 +43,10 @@ def OCR(img_path, ocr, image_name, result_dir):
     #convert txts into one string
     text = ' '.join(txts)
     scores = [line[1][1] for line in result]
-    im_show = draw_ocr(image, boxes, txts, scores, font_path='arial.ttf')
-    im_show = Image.fromarray(im_show)
-    result_path = os.path.join(result_dir, f'{image_name}_result.jpg')
-    im_show.save(result_path)
+    # im_show = draw_ocr(image, boxes, txts, scores, font_path='arial.ttf')
+    # im_show = Image.fromarray(im_show)
+    # result_path = os.path.join(result_dir, f'{image_name}_result.jpg')
+    # im_show.save(result_path)
     text = clean_text(text)
     print(text)
     return text
